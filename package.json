@@ -1,10 +1,9 @@
 {
-  "name": "node-config",
+  "name": "react-ts-template",
   "version": "0.1.0",
   "scripts": {
     "start": "node scripts/start.js",
     "dev": "node scripts/start.js",
-    "server": "export NODE_ENV=development && node server/index.js",
     "build": "node scripts/build.js && rm -rf build/ && mv dist build"
   },
   "dependencies": {
