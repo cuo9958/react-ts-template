@@ -2,7 +2,6 @@ import React from 'react';
 import { inject } from 'mobx-react';
 import { Button, Input, Message } from 'element-react';
 import './index.less';
-import { Link } from 'react-router-dom';
 
 import Background from './background';
 
@@ -30,8 +29,8 @@ export default class extends React.Component<iProps, iState> {
             <Background>
                 <div className="box">
                     <div className="title">
-                        <span>云&nbsp;梭&nbsp;|&nbsp;账&nbsp;号&nbsp;登&nbsp;录</span>
-                        <div className="sm">登录即可管理你的客户端</div>
+                        <span>告&nbsp;警&nbsp;|&nbsp;账&nbsp;号&nbsp;登&nbsp;录</span>
+                        <div className="sm">登录即可管理你的项目</div>
                     </div>
                     <div className="content">
                         <Input placeholder="邮箱" onChange={(e: any) => this.setState({ email: e })} />
@@ -39,10 +38,6 @@ export default class extends React.Component<iProps, iState> {
                         <Button onClick={this.login} className="login_btn" type="info">
                             登录
                         </Button>
-                    </div>
-                    <div className="footer">
-                        <Link to="/forget">忘记密码？</Link>
-                        <Link to="/reg">注册一个新账户+</Link>
                     </div>
                 </div>
             </Background>

@@ -28,7 +28,7 @@ function Menus(item: any, onSelect: any, active: string) {
 
 @inject((models: any) => ({
     isLogin: models.user.isLogin,
-    nickname: models.user.nickname
+    nickname: models.user.nickname,
 }))
 @observer
 export default class extends React.Component<iProps, IState> {
@@ -37,7 +37,7 @@ export default class extends React.Component<iProps, IState> {
         const curr = Utils.checkUrl(props.location.pathname);
         this.state = {
             active: curr.name,
-            layout: !curr.hideLayout
+            layout: !curr.hideLayout,
         };
         if (curr.title) document.title = curr.title + ' | 后缀';
     }
@@ -49,8 +49,8 @@ export default class extends React.Component<iProps, IState> {
                 <div id="sider">
                     <Link to="/">
                         <div id="logo">
-                            <img src="https://img1.daling.com/zin/public/specialTopic/2020/01/13/15/09/16/AHGUXXR000004757459.png" alt="" />
-                            <span>云梭</span>
+                            <img src="https://img5.daling.com/zin/public/specialTopic/2020/06/20/18/44/22/525400B9EA93HWRJF000008056333.png" alt="" />
+                            <span>告警APP</span>
                             <small>v1.0</small>
                         </div>
                     </Link>
@@ -58,7 +58,7 @@ export default class extends React.Component<iProps, IState> {
                         <ul className="menu_bg">{url_configs.map((item, index) => Menus(item, this.onSelect, this.state.active))}</ul>
                     </div>
                     <div className="footer">
-                        <a href="http://beian.miit.gov.cn/">京ICP备18029957号-1</a>
+                        <a href="/">前端技术支持</a>
                     </div>
                 </div>
                 <div id="main">
@@ -103,7 +103,7 @@ export default class extends React.Component<iProps, IState> {
         // this.props.check();
         this.setState({
             active: curr.name,
-            layout: !curr.hideLayout
+            layout: !curr.hideLayout,
         });
         if (curr.title) document.title = curr.title + ' | 后缀';
     }
